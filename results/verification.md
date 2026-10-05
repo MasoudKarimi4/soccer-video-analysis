@@ -1,6 +1,6 @@
 # Verification record
 
-Repository preparation was completed on **October 4, 2026** (America/Toronto). Verification was performed locally on Windows with Python 3.12; the checked-in GitHub Actions matrix is configured for Windows/Linux and Python 3.10/3.12 but has not run on a remote GitHub repository yet.
+Repository preparation was completed on **October 4, 2026** (America/Toronto). Verification was performed locally on Windows with Python 3.12. The published repository also runs a GitHub Actions matrix for Windows/Linux and Python 3.10/3.12; check the [workflow history](https://github.com/MasoudKarimi4/soccer-video-analysis/actions/workflows/ci.yml) for results on each commit.
 
 ## Checks passed
 
@@ -16,4 +16,4 @@ Repository preparation was completed on **October 4, 2026** (America/Toronto). V
 
 ## Interpretation limits
 
-These checks verify implementation and artifact consistency. They do not measure ground-truth detection/localization accuracy, real-time performance, cross-match generalization, or remote CI success. See [results](../docs/results.md) for the distinction between raw historical evidence, report-only claims and fresh runs.
+These local checks verify implementation and artifact consistency. They do not measure ground-truth detection/localization accuracy, real-time performance, or cross-match generalization. Remote CI results are recorded separately in the linked workflow history. See [results](../docs/results.md) for the distinction between raw historical evidence, report-only claims and fresh runs.

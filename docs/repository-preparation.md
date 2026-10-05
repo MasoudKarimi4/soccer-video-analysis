@@ -39,21 +39,21 @@ The original source directories are preserved. A malformed two-column report fig
 
 These changes preserve the project design while improving reproducibility and inspectability. Fresh results remain separate from original summaries. Main dependency versions are pinned; the exact local installation freeze is recorded with verification artifacts.
 
-## Local Git repository
+## GitHub repository
 
-The prepared folder is a standalone Git repository on branch `main`, with a clean initial commit. It is ready to copy, inspect or publish. Raw assets and generated runtime outputs are ignored. The delivery archive is made from tracked files, excluding `.git`, local videos/weights and build environments.
+The project is published as the public repository [MasoudKarimi4/soccer-video-analysis](https://github.com/MasoudKarimi4/soccer-video-analysis), with `main` as the default branch. The local checkout tracks `origin/main`. Raw assets and generated runtime outputs are ignored. The delivery archive is made from tracked files, excluding `.git`, local videos/weights and build environments.
 
-The repository has not been uploaded to GitHub: no authenticated GitHub creation tool/CLI was available in the preparation session, and no remote destination or visibility was specified. No repository URL is invented.
+## Publish subsequent updates
 
-## Publish when a destination is available
-
-Create an empty GitHub repository named `soccer-video-analysis`, choosing the desired visibility. Do not initialize an additional README, since this folder already has a commit. From this repository, replacing `YOUR_ACCOUNT` with the destination account:
+From the local checkout, review and commit changes before pushing:
 
 ```bash
-git remote add origin https://github.com/YOUR_ACCOUNT/soccer-video-analysis.git
-git push -u origin main
+git status
+git add <changed-files>
+git commit -m "Describe the change"
+git push origin main
 ```
 
-Alternatively, an authenticated GitHub CLI can create and push the repository; choose visibility explicitly. Before public publication, the contributors should select their intended code license and resolve the broadcast-frame asset policy. Existing dependency/model licenses remain applicable. These choices were not inferred during preparation.
+GitHub Actions runs the checked-in validation workflow on pushes and pull requests. See the [workflow history](https://github.com/MasoudKarimi4/soccer-video-analysis/actions/workflows/ci.yml) for the current status. Code and asset licensing are documented in [licensing](licensing.md); publication does not assign a new code license.
 
 Suggested description: **Hybrid soccer video analysis with OpenCV, YOLO11, HSV team classification, Kalman tracking and ball fusion.** Suggested topics: `computer-vision`, `opencv`, `soccer`, `object-tracking`, `yolo`, `image-processing`.

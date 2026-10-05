@@ -1,5 +1,7 @@
 # Soccer Video Analysis
 
+[![Validate repository](https://github.com/MasoudKarimi4/soccer-video-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/MasoudKarimi4/soccer-video-analysis/actions/workflows/ci.yml)
+
 **Player detection, team classification, multi-object tracking, and ball fusion in broadcast soccer.**
 
 A picture-processing project that combines interpretable OpenCV operations with selective YOLO11 detection. The classical branch uses field segmentation, motion contours, jersey masks, and temporal tracking. The recommended hybrid branch uses YOLO for object proposals, then applies scene filtering, color classification, local recovery, and a custom Kalman/assignment tracker.
