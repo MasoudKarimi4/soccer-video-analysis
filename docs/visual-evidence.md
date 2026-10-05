@@ -12,37 +12,37 @@ The [capture manifest](images/verified/capture_manifest.json) records each sourc
 
 At frame 159, the hybrid places the ball marker near the small white object on the left of the center circle. This is qualitative alignment, not a measured localization error. The other frames expose imperfect trails, active boxes that can persist during misses, and difficult white-object hypotheses. They are included to make the behavior inspectable rather than imply every object is correct.
 
-## Supplied historical outputs
+## Saved development outputs
 
-![Input, supplied safe_v8 classical output, supplied final hybrid output](images/comparison.png)
+![Input, supplied safe_v8 classical output, development hybrid output](images/comparison.png)
 
-The historical classical column is **`outputs_v7_refined_seeded_safe_v8`**, whose saved summary is notably red-heavy. It is not the unavailable “best restored” checkpoint described by the notes. The historical hybrid column is **`outputs_hybrid_ultralytics_yolo11s_ball_highresml_viz`**. The [historical capture manifest](images/capture_manifest.json) identifies the original output videos and decoded frames.
+The historical classical column is **`outputs_v7_refined_seeded_safe_v8`**, whose saved summary is notably red-heavy. The historical hybrid column is **`outputs_hybrid_ultralytics_yolo11s_ball_highresml_viz`**. The [historical capture manifest](images/capture_manifest.json) identifies the original output videos and decoded frames.
 
-Using these images beside the fresh results avoids silently replacing historical outputs with newer runs. The supplied final hybrid frame-159 screenshot is retained as historical evidence.
+Using these images beside the fresh results avoids silently replacing historical outputs with newer runs. The development hybrid frame-159 screenshot is retained as historical evidence.
 
 ## Imported intermediate-stage illustrations
 
-These were already present in the laptop bundle and remain useful to explain the picture-processing stages. They are illustrations from the supplied generators, not independent accuracy measurements. The [import manifest](images/imported_manifest.json) preserves source relative paths and image hashes.
+These illustrate the processing stages from earlier development runs. They are generated stage illustrations, not independent accuracy measurements. The [import manifest](images/imported_manifest.json) preserves source relative paths and image hashes.
 
 | Figure | Content | Provenance |
 |---|---|---|
-| [HSV channels](images/hsv_channels.png) | Hue/saturation/value interpretation | Supplied hybrid figure pack, frame 159 |
-| [Pitch segmentation](images/pitch_segmentation.png) | Raw/clean pitch reasoning | Supplied hybrid figure pack, frame 159 |
-| [Playable region](images/playable_region.png) | Crowd cutoff and scene prior | Supplied hybrid figure pack, frame 159 |
-| [Motion mask](images/motion_mask.png) | KNN foreground support | Supplied hybrid figure pack, frame 159 |
-| [Classical contours](images/classical_contours.png) | Motion contour proposals | Supplied classical figure pack, frame 159 |
-| [Detector filtering](images/detector_filtering.png) | Raw and filtered learned proposals | Supplied hybrid figure pack, frame 159 |
-| [Team masks](images/team_masks.png) | Calibrated jersey masks | Supplied hybrid figure pack, frame 159 |
-| [Local recovery](images/local_recovery.png) | Recovery around prior tracks | Supplied hybrid pack, example frame 31 |
-| [Ball candidates](images/ball_candidates.png) | Filtered learned ball evidence | Supplied hybrid figure pack, frame 159 |
+| [HSV channels](images/hsv_channels.png) | Hue/saturation/value interpretation | Development hybrid figure pack, frame 159 |
+| [Pitch segmentation](images/pitch_segmentation.png) | Raw/clean pitch reasoning | Development hybrid figure pack, frame 159 |
+| [Playable region](images/playable_region.png) | Crowd cutoff and scene prior | Development hybrid figure pack, frame 159 |
+| [Motion mask](images/motion_mask.png) | KNN foreground support | Development hybrid figure pack, frame 159 |
+| [Classical contours](images/classical_contours.png) | Motion contour proposals | Development classical figure pack, frame 159 |
+| [Detector filtering](images/detector_filtering.png) | Raw and filtered learned proposals | Development hybrid figure pack, frame 159 |
+| [Team masks](images/team_masks.png) | Calibrated jersey masks | Development hybrid figure pack, frame 159 |
+| [Local recovery](images/local_recovery.png) | Recovery around prior tracks | Development hybrid pack, example frame 31 |
+| [Ball candidates](images/ball_candidates.png) | Filtered learned ball evidence | Development hybrid figure pack, frame 159 |
 | [Manual calibration](images/manual_calibration.png) | Seed boxes | Source frame 111 |
 
 The hybrid and classical stage generators were also executed on this repository's implementation as validation. Their generated artifacts remain in local ignored output folders; imported stage illustrations are labeled as such to avoid claiming they depict every code change.
 
 ## Recreate evidence
 
-Use [capture_evidence.py](../capture_evidence.py) to extract aligned source/output frames. It fails if a requested frame cannot be read or saved. For nonzero-start output segments, specify `--annotated-start-frame` to align source indices. Stage generators replay frames and produce masks/candidate illustrations. Exact commands are in [reproduction](reproduction.md).
+Use [capture_evidence.py](../scripts/capture_evidence.py) to extract aligned source/output frames. It fails if a requested frame cannot be read or saved. For nonzero-start output segments, specify `--annotated-start-frame` to align source indices. Stage generators replay frames and produce masks/candidate illustrations. Exact commands are in [reproduction](reproduction.md).
 
-The comparison chart is derived solely from checked-in summaries using [summarize_results.py](../summarize_results.py), with values also in [comparison.csv](../results/comparison.csv). It visualizes output counts and created IDs; it is not an accuracy chart.
+The comparison chart is derived solely from checked-in summaries using [summarize_results.py](../scripts/summarize_results.py), with values also in [comparison.csv](../results/comparison.csv). It visualizes output counts and created IDs; it is not an accuracy chart.
 
 The original broadcast URL was not supplied. Frame excerpts therefore have local-video provenance rather than a verified external source link.

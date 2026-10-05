@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "soccer-video-analysis"
+version = "0.1.0"
+description = "Classical and hybrid soccer video analysis with team classification, tracking, and ball fusion."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+authors = [{name = "Masoud Karimi"}, {name = "Zachary Sikka"}]
+keywords = ["soccer", "computer-vision", "opencv", "yolo", "object-tracking"]
+dependencies = [
+    "numpy==1.26.4",
+    "opencv-python==4.11.0.86",
+    "scipy==1.13.1",
+]
+
+[project.optional-dependencies]
+ml = [
+    "ultralytics==8.3.107",
+    "lap==0.5.12",
+    "torch==2.6.0",
+    "torchvision==0.21.0",
+    "pandas==2.2.3",
+]
+visualization = ["matplotlib==3.10.1", "Pillow==11.3.0"]
+
+[project.scripts]
+soccer-analyze = "soccer_video_analysis.cli:main"
+soccer-classical = "soccer_video_analysis.classical:main"
+soccer-hybrid = "soccer_video_analysis.hybrid:main"
+soccer-baseline = "soccer_video_analysis.baseline:main"
+
+[project.urls]
+Repository = "https://github.com/MasoudKarimi4/soccer-video-analysis"
+Issues = "https://github.com/MasoudKarimi4/soccer-video-analysis/issues"
+Documentation = "https://github.com/MasoudKarimi4/soccer-video-analysis/tree/main/docs"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+soccer_video_analysis = ["presets/*.json"]

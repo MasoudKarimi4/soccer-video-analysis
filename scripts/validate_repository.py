@@ -5,13 +5,13 @@ import json
 import re
 from urllib.parse import unquote
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
     errors = []
     for path in ROOT.rglob('*.md'):
-        if '.git' in path.parts:
+        if any(part in ('.git', '.venv', 'outputs', 'build', 'dist') for part in path.relative_to(ROOT).parts):
             continue
         for target in re.findall(r'\]\(([^)]+)\)', path.read_text(encoding='utf-8')):
             target = target.strip('<>').split('#')[0]

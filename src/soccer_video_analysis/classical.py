@@ -14,7 +14,7 @@ import json
 import math
 import time
 
-from runtime_support import validate_run, run_metadata
+from .runtime import validate_run, run_metadata
 from collections import Counter, deque
 from dataclasses import dataclass, field
 from pathlib import Path

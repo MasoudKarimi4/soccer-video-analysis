@@ -32,7 +32,7 @@ def main() -> None:
     parser.add_argument('--frames', type=int, nargs='+', default=[60, 159, 240])
     parser.add_argument('--annotated-start-frame', type=int, default=0, help='Absolute source index corresponding to annotated frame 0')
     parser.add_argument('--output-dir', type=Path, required=True)
-    parser.add_argument('--label', default='Supplied final hybrid output')
+    parser.add_argument('--label', default='Hybrid output')
     args = parser.parse_args()
     if any(i < args.annotated_start_frame for i in args.frames):
         parser.error('Selected frames must be within the annotated segment.')

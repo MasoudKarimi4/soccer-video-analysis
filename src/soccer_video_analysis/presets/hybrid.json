@@ -1,6 +1,6 @@
 {
   "pipeline": "hybrid",
-  "description": "Paper's final YOLO11s configuration; supply the example seed only for the original footage.",
+  "description": "Recommended YOLO11s configuration; supply the example seed only for the original footage.",
   "parameters": {
     "duration-sec": 10, "resize-width": 960, "detector-backend": "ultralytics",
     "detector-input-size": 960, "detector-ball-input-size": 1280,

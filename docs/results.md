@@ -1,6 +1,6 @@
 # Results and evaluation
 
-The project uses output summaries and frame inspection rather than labeled ground-truth evaluation. This document separates saved historical experiments, claims supported only by the paper/development notes, and fresh verification of the enhanced implementation.
+The project uses output summaries and frame inspection rather than labeled ground-truth evaluation. This document compares saved development experiments with verified runs of the implementation.
 
 ## Fresh repository verification
 
@@ -15,9 +15,9 @@ The full records are in [verified results](../results/verified/README.md). A 60-
 
 ![Counts from supplied and freshly verified experiments](images/results_comparison.png)
 
-The supplied classical `safe_v8` row is an imbalanced experimental checkpoint. It is not the reported best classical result. Bar height and fewer IDs must not be interpreted as recall or tracking accuracy.
+The development classical `safe_v8` row is an imbalanced experimental checkpoint. Bar height and fewer IDs must not be interpreted as recall or tracking accuracy.
 
-## Supplied historical runs with raw summaries
+## Saved development runs with raw summaries
 
 | Run | Frames | Player/person detections | Team red / light / other | Player/person IDs | Ball evidence |
 |---|---:|---:|---|---:|---|
@@ -31,22 +31,9 @@ The supplied classical `safe_v8` row is an imbalanced experimental checkpoint. I
 
 The selected summaries and track CSVs are checked in under [results/historical](../results/historical/provenance.json). Path strings were reduced to basenames; all numerical values are preserved. Hashes identify the original summary bytes. Duplicate high-resolution runs with identical numbers were omitted. Complete run parameters and original dependency versions were not recorded for these historical summaries.
 
-The laptop's safe_v6–safe_v8 runs skew strongly red. Their higher total counts do not make them stronger player detectors. The retained current source reproduces a more balanced fresh classical result; the experimental variants that produced all safe-run outputs were not supplied as separate source versions.
+The development safe_v6–safe_v8 runs skew strongly red. Their higher total counts do not make them stronger player detectors. The retained current source reproduces a more balanced fresh classical result; the experimental variants that produced all safe-run outputs were not supplied as separate source versions.
 
-The supplied YOLO11m hybrid creates fewer IDs than the YOLO11s hybrid, but that is insufficient to rank them. The original notes recommend YOLO11s for overall qualitative behavior. No controlled m/s/n model accuracy benchmark or timing study was supplied.
-
-## Historical claims without corresponding raw outputs
-
-| Checkpoint described in paper/notes | Player/person detections | Player/person IDs | Ball evidence | Support |
-|---|---:|---:|---|---|
-| Automatic classical `v5_calibrated_soft` | 2,195 | 46 | 270 rendered states | Paper and progress report; raw folder absent |
-| Restored seeded classical `v7_refined_seeded_restored` | 2,247 | 47 | 270 rendered states | Development context/presentation brief; raw folder absent |
-| Direct YOLO11s baseline | 5,397 | 39 | 58 sports-ball detections; 15 ball IDs | Paper/architecture comparison; raw folder absent |
-| Earlier YOLO11s fused-ball hybrid | 4,590 | 35 | 151 filtered detector candidates; 270 rendered states | Paper/notes; raw folder absent |
-
-These were reportedly 300-frame experiments. The paper calls the automatic classical result the best classical baseline, while later development notes call the restored manually seeded result the best classical checkpoint. Both are preserved with their calibration distinction and provenance. Neither is presented as an independently verified saved run in this bundle.
-
-The paper describes a ball-candidate increase from 151 to 221 after the higher-resolution pass. Only the final 221-candidate raw summary is present here. The change is a historical report claim; an independently reproduced 960-versus-1280 ablation was not performed during preparation.
+The supplied YOLO11m hybrid creates fewer IDs than the YOLO11s hybrid, but that is insufficient to rank them. YOLO11s is the default hybrid configuration. No controlled m/s/n model accuracy benchmark or timing study is included.
 
 ## Metric definitions
 

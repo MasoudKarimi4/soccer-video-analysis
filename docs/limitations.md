@@ -30,4 +30,4 @@ There are no supplied ground-truth annotations. More detections do not establish
 5. Test unseen matches, jersey colors, lighting and scene cuts. Add cut detection and camera compensation before claiming transferable motion analytics.
 6. Add pitch homography for metric coordinates before reporting physical speeds or spatial heatmaps.
 
-These are proposed extensions, not implemented or measured results. The original proposal's heatmaps and approximate physical movement analysis were not completed in the supplied implementation.
+These are proposed extensions, not implemented or measured results. Heatmaps and physical movement analysis are not implemented.

@@ -9,7 +9,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 import cv2
 import numpy as np
 
-import soccer_opencv_pipeline as base
+from soccer_video_analysis import classical as base
 
 
 def add_title(img: np.ndarray, title: str, subtitle: str = "") -> np.ndarray:

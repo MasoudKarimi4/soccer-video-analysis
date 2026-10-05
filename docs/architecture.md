@@ -1,6 +1,6 @@
 # Architecture and code map
 
-The repository retains two mature branches sharing the same CV and tracking primitives. The older `soccer_opencv_pipeline_v2.py` prototype is omitted because its functionality is superseded by the current classical implementation. The detector-only baseline remains as a useful comparison.
+The `soccer_video_analysis` package provides classical and hybrid pipelines sharing CV and tracking primitives. A direct detector/ByteTrack baseline provides a separate comparison. The installed CLI dispatches pipeline modules and reads built-in presets through package resources, so operation does not depend on the checkout directory.
 
 ## Shared stages
 
@@ -17,11 +17,11 @@ The repository retains two mature branches sharing the same CV and tracking prim
 | Ball state | `BallTracker` | Kalman correction, temporary prediction and strong-candidate reacquisition |
 | Rendering | `draw_player`, `draw_ball`, `shade_crowd` | Team boxes, trails, ball marker and scene boundary |
 
-These functions are in [soccer_opencv_pipeline.py](../soccer_opencv_pipeline.py). Motion is the primary player proposal source only in the classical branch. Hybrid motion remains an auxiliary ball/recovery signal.
+These functions are in [classical.py](../src/soccer_video_analysis/classical.py). Motion is the primary player proposal source only in the classical branch. Hybrid motion remains an auxiliary ball/recovery signal.
 
 ## Hybrid branch
 
-[soccer_hybrid_pipeline.py](../soccer_hybrid_pipeline.py) wraps these stages with `UltralyticsPersonDetector`, `filter_detector_boxes`, `classify_team_from_bbox`, and `detector_ball_candidates`.
+[hybrid.py](../src/soccer_video_analysis/hybrid.py) wraps these stages with `UltralyticsPersonDetector`, `filter_detector_boxes`, `classify_team_from_bbox`, and `detector_ball_candidates`.
 
 Player boxes are clipped to the image and filtered by area, aspect ratio, perspective-dependent constraints, non-green ratio, and playable overlap. Jersey classification emphasizes a central torso crop, with a full-box fallback when that crop is ambiguous. The inherited classifier then further emphasizes its crop's upper portion; this is a heuristic, not anatomical pose estimation.
 

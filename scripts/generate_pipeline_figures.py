@@ -10,8 +10,8 @@ from typing import Dict, List, Optional, Sequence, Tuple
 import cv2
 import numpy as np
 
-import soccer_hybrid_pipeline as hybrid
-import soccer_opencv_pipeline as base
+from soccer_video_analysis import hybrid
+from soccer_video_analysis import classical as base
 
 
 BBox = base.BBox

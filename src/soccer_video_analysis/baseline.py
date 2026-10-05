@@ -5,7 +5,7 @@ import argparse
 import json
 import time
 
-from runtime_support import validate_run, run_metadata, configure_ultralytics
+from .runtime import validate_run, run_metadata, configure_ultralytics
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Dict, Set

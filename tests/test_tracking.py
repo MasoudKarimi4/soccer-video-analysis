@@ -7,8 +7,8 @@ import unittest
 from unittest.mock import patch
 
 import numpy as np
-import soccer_opencv_pipeline as base
-import soccer_hybrid_pipeline as hybrid
+from soccer_video_analysis import classical as base
+from soccer_video_analysis import hybrid
 
 
 class TrackingTests(unittest.TestCase):

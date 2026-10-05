@@ -3,7 +3,7 @@ import csv
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 RUNS = [
     ('Supplied classical safe_v8', 'historical/classical_safe_v8'),
     ('Supplied hybrid YOLO11s', 'historical/hybrid_yolo11s_highres'),

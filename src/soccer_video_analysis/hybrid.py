@@ -22,7 +22,7 @@ import json
 import csv
 import time
 
-from runtime_support import validate_run, run_metadata, configure_ultralytics
+from .runtime import validate_run, run_metadata, configure_ultralytics
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, List, Optional, Sequence, Tuple
@@ -30,7 +30,7 @@ from typing import Any, List, Optional, Sequence, Tuple
 import cv2
 import numpy as np
 
-import soccer_opencv_pipeline as base
+from . import classical as base
 
 
 BBox = base.BBox

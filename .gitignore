@@ -21,3 +21,6 @@ models/*
 .DS_Store
 Thumbs.db
 *.log
+build/
+dist/
+*.egg-info/

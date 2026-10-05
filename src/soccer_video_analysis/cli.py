@@ -1,19 +1,19 @@
-"""Run a checked-in experiment preset without shell-specific quoting."""
+"""Run built-in or custom soccer analysis presets."""
 from __future__ import annotations
 
 import argparse
 import json
 from pathlib import Path
+from importlib.resources import files
 import subprocess
 import sys
 
-ROOT = Path(__file__).resolve().parent
-SCRIPTS = {"classical": "soccer_opencv_pipeline.py", "hybrid": "soccer_hybrid_pipeline.py", "baseline": "run_ultralytics_baseline.py"}
+MODULES = {name: f"soccer_video_analysis.{name}" for name in ("classical", "hybrid", "baseline")}
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("pipeline", choices=SCRIPTS)
+    parser.add_argument("pipeline", choices=MODULES)
     parser.add_argument("--config", type=Path)
     parser.add_argument("--video", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
@@ -22,7 +22,7 @@ def main() -> None:
     parser.add_argument("--duration-sec", type=float)
     parser.add_argument("--device")
     args, extra = parser.parse_known_args()
-    config = args.config or ROOT / "configs" / f"{args.pipeline}.json"
+    config = args.config or files("soccer_video_analysis").joinpath("presets").joinpath(f"{args.pipeline}.json")
     preset = json.loads(config.read_text(encoding="utf-8"))
     if preset.get("pipeline") != args.pipeline:
         parser.error("Configuration pipeline does not match the selected pipeline.")
@@ -40,7 +40,7 @@ def main() -> None:
         if args.pipeline == "baseline":
             parser.error("The detector-only baseline does not use a seed file.")
         params["seed-file"] = str(args.seed_file)
-    command = [sys.executable, str(ROOT / SCRIPTS[args.pipeline])]
+    command = [sys.executable, "-m", MODULES[args.pipeline]]
     for key, value in params.items():
         if value is True:
             command.append(f"--{key}")

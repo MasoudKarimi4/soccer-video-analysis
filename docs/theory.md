@@ -1,6 +1,6 @@
 # Image processing and tracking theory
 
-The formulas below explain the implemented decisions. They do not establish ground-truth detection accuracy. The project paper provides historical context; implementation details here follow the retained code.
+The formulas below explain the implemented decisions. They do not establish ground-truth detection accuracy. Implementation details follow the package source.
 
 ## Color segmentation
 
@@ -60,7 +60,7 @@ For predicted track $i$ and detection $j$,
 
 $$C_{ij}=\|\hat p_i-p_j\|_2+\lambda_{ij},$$
 
-where the team mismatch penalty discourages red-to-light assignments. SciPy's [linear_sum_assignment](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linear_sum_assignment.html) solves the minimum-cost assignment. SciPy implements a modified Jonker–Volgenant algorithm; “Hungarian” is used in the original project as shorthand for optimal linear assignment. The optional greedy fallback is not equivalent.
+where the team mismatch penalty discourages red-to-light assignments. SciPy's [linear_sum_assignment](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linear_sum_assignment.html) solves the minimum-cost assignment. SciPy implements a modified Jonker–Volgenant algorithm; “Hungarian” is used in some tracker labels as shorthand for optimal linear assignment. The optional greedy fallback is not equivalent.
 
 The repository gates forbidden edges **before** optimization with a sufficiently large penalty and drops forbidden matches afterward. Otherwise an out-of-range match can steal a feasible detection from another track. Unmatched tracks persist up to the configured missed-frame threshold; unmatched detections create IDs. There is no appearance embedding or re-identification stage.
 
@@ -70,7 +70,7 @@ The design resembles [SORT's tracking-by-detection principle](https://arxiv.org/
 
 The ball's white appearance overlaps with pitch markings, socks and light jerseys. The system combines learned boxes with classical compact-object, local-neighborhood and foot-zone searches. Circularity $4\pi A/P^2$, density, brightness, whiteness, isolation and contextual exclusions contribute to handcrafted candidate ranking.
 
-The high-resolution ball pass uses 1280 rather than 960 input size. This gives the network a larger representation of a small object, but the source frame was already resized to analysis width 960. Upsampling supplies no new original detail. The extra inference pass also adds runtime. [YOLO11 documentation](https://docs.ultralytics.com/models/yolo11/) is the appropriate model reference; the 2016 YOLO paper cited by the report explains the broader detector family rather than YOLO11's exact architecture.
+The high-resolution ball pass uses 1280 rather than 960 input size. This gives the network a larger representation of a small object, but the source frame was already resized to analysis width 960. Upsampling supplies no new original detail. The extra inference pass also adds runtime. [YOLO11 documentation](https://docs.ultralytics.com/models/yolo11/) describes the pretrained detector used here.
 
 The ball tracker may reacquire a strong candidate far from its prediction. That can correct a stale hypothesis, but it can also jump to a wrong bright object. Its scores are ranking heuristics, not probabilities. A measured update demonstrates candidate acceptance, not correctness.
 

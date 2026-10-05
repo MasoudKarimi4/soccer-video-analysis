@@ -12,6 +12,6 @@ The shorter direct baseline run verifies the command line and learned tracker on
 
 Classical/hybrid folders include `frame_metrics.csv` and `track_metrics.csv`. Their summary metadata contains resolved parameters, runtime versions, asset fingerprints and local elapsed seconds. Thread settings during learned inference were `OMP_NUM_THREADS=4` and `MKL_NUM_THREADS=4`. Other jobs overlapped, so elapsed times are not controlled runtime benchmarks.
 
-The hybrid reproduces the supplied final player/team/candidate totals while creating 32 rather than 35 IDs after association/clipping/reproducibility fixes. This difference alone does not establish better identity accuracy. The classical fresh run is balanced and resembles the reported restored classical checkpoint, but is a new experiment: the missing original checkpoint is not being retroactively reconstructed as a saved artifact.
+The hybrid reproduces the supplied final player/team/candidate totals while creating 32 rather than 35 IDs after association/clipping/reproducibility fixes. This difference alone does not establish better identity accuracy. The verified classical run has a balanced red/light split. That balance does not establish correct classification.
 
 The ball's `measured` state means the tracker accepted a candidate. Correct ball localization still requires a labeled reference. [Assets](assets.json) identify the supplied video/weights/seed; the [environment freeze](environment-windows-py312.txt) records the tested Windows installation and is not a cross-platform lock.

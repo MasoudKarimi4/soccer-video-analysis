@@ -1,3 +1,2 @@
-numpy==1.26.4
-opencv-python==4.11.0.86
-scipy==1.13.1
+# Convenience install; dependency pins are defined in pyproject.toml.
+-e .

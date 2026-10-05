@@ -1,7 +1,9 @@
 cff-version: 1.2.0
 message: "Please cite the project and relevant upstream methods if you use this work."
-title: "Soccer Player Detection and Multi-Object Tracking"
+title: "Soccer Video Analysis"
 type: software
+version: 0.1.0
+repository-code: "https://github.com/MasoudKarimi4/soccer-video-analysis"
 authors:
   - family-names: Karimi
     given-names: Masoud

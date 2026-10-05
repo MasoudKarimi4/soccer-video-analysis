@@ -1,2 +1,2 @@
--r requirements-core.txt
-Pillow==11.3.0
+# Core tests and evidence/chart tools; no learned weights are required.
+-e .[visualization]
