@@ -1,0 +1,53 @@
+{
+  "input_video": "..\\soccer_footage.mp4",
+  "model": "..\\yolo11s.pt",
+  "start_sec": 0.0,
+  "duration_sec": 2.0,
+  "frames_processed": 60,
+  "metadata": {
+    "schema_version": 2,
+    "parameters": {
+      "video": "..\\soccer_footage.mp4",
+      "model": "..\\yolo11s.pt",
+      "output": "outputs\\verified_baseline_2sec",
+      "start_sec": 0.0,
+      "duration_sec": 2.0,
+      "resize_width": 960,
+      "imgsz": 960,
+      "conf": 0.15,
+      "iou": 0.45,
+      "device": "cpu",
+      "tracker": "bytetrack.yaml",
+      "include_ball": true,
+      "random_seed": 0
+    },
+    "source_fps": 30.0,
+    "warmup_frames": 0,
+    "elapsed_seconds": 24.376,
+    "environment": {
+      "python": "3.12.14",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "packages": {
+        "numpy": "1.26.4",
+        "opencv-python": "4.11.0.86",
+        "scipy": "1.13.1",
+        "ultralytics": "8.3.107",
+        "torch": "2.6.0+cpu",
+        "lap": "0.5.12"
+      }
+    },
+    "asset_sha256": {
+      "model": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5"
+    }
+  },
+  "detections_by_class": {
+    "person": 1114,
+    "sports ball": 2
+  },
+  "unique_tracks_by_class": {
+    "person": 21,
+    "sports ball": 2
+  },
+  "tracker": "bytetrack.yaml",
+  "output_video": "outputs\\verified_baseline_2sec\\annotated_tracking.mp4"
+}

@@ -1,0 +1,5 @@
+run,source,frames,detections,red,light,other,track_ids,ball_visible_frames
+Supplied classical safe_v8,historical/classical_safe_v8/run_summary.json,300,1802,1352,418,32,51,270
+Supplied hybrid YOLO11s,historical/hybrid_yolo11s_highres/run_summary.json,300,4590,2334,2229,27,35,270
+Verified classical,verified/classical_10sec/run_summary.json,300,2249,1108,1116,25,45,270
+Verified hybrid YOLO11s,verified/hybrid_10sec/run_summary.json,300,4590,2334,2229,27,32,270

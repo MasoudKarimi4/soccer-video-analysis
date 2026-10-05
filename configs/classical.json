@@ -1,0 +1,5 @@
+{
+  "pipeline": "classical",
+  "description": "Current classical implementation; automatic calibration, no manual seed required.",
+  "parameters": {"duration-sec": 10, "resize-width": 960, "random-seed": 0}
+}

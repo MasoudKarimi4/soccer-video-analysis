@@ -1,0 +1,96 @@
+{
+  "label": "Supplied final hybrid output",
+  "indexing": "zero-based",
+  "frames": [
+    {
+      "file": "input_frame60.png",
+      "source_video": "soccer_footage.mp4",
+      "source_output_frame_index": 60,
+      "absolute_input_frame_index": 60,
+      "source_fps": 30.0,
+      "source_frame_count": 7118,
+      "extraction": "OpenCV VideoCapture seek/read; unmodified decoded frame",
+      "sha256": "73c262b690e9c2e2824abd8a955d19857c5dd1d8e4808ab9dbcc896cce9447e7"
+    },
+    {
+      "file": "classical_frame60.png",
+      "source_video": "annotated_tracking.mp4",
+      "source_output_frame_index": 60,
+      "absolute_input_frame_index": 60,
+      "source_fps": 30.0,
+      "source_frame_count": 300,
+      "extraction": "OpenCV VideoCapture seek/read; unmodified decoded frame",
+      "sha256": "cfd2b23afb839ac3ef0a0d22e996572ca4e4c06fc4621f7d62284004eb2b5c15"
+    },
+    {
+      "file": "hybrid_frame60.png",
+      "source_video": "annotated_tracking.mp4",
+      "source_output_frame_index": 60,
+      "absolute_input_frame_index": 60,
+      "source_fps": 30.0,
+      "source_frame_count": 300,
+      "extraction": "OpenCV VideoCapture seek/read; unmodified decoded frame",
+      "sha256": "9bd8385c8234983cb9747e0cd5a159046790345708bb6a919a08cc2d2b9431aa"
+    },
+    {
+      "file": "input_frame159.png",
+      "source_video": "soccer_footage.mp4",
+      "source_output_frame_index": 159,
+      "absolute_input_frame_index": 159,
+      "source_fps": 30.0,
+      "source_frame_count": 7118,
+      "extraction": "OpenCV VideoCapture seek/read; unmodified decoded frame",
+      "sha256": "db45ae456086d978f7c0c4b8b8f004430c4c51173ac72e29945dde7527257345"
+    },
+    {
+      "file": "classical_frame159.png",
+      "source_video": "annotated_tracking.mp4",
+      "source_output_frame_index": 159,
+      "absolute_input_frame_index": 159,
+      "source_fps": 30.0,
+      "source_frame_count": 300,
+      "extraction": "OpenCV VideoCapture seek/read; unmodified decoded frame",
+      "sha256": "7ca7febdc15cb46a8f2706b1c76fd01667e290316f7400e2eafd71b8b919bf86"
+    },
+    {
+      "file": "hybrid_frame159.png",
+      "source_video": "annotated_tracking.mp4",
+      "source_output_frame_index": 159,
+      "absolute_input_frame_index": 159,
+      "source_fps": 30.0,
+      "source_frame_count": 300,
+      "extraction": "OpenCV VideoCapture seek/read; unmodified decoded frame",
+      "sha256": "d09a4c7d0af55c0c2a705c4062b11e77aa3011fad9f213636e23872d88594db9"
+    },
+    {
+      "file": "input_frame240.png",
+      "source_video": "soccer_footage.mp4",
+      "source_output_frame_index": 240,
+      "absolute_input_frame_index": 240,
+      "source_fps": 30.0,
+      "source_frame_count": 7118,
+      "extraction": "OpenCV VideoCapture seek/read; unmodified decoded frame",
+      "sha256": "47404f9805466daf82b3fc6483125057142a1fd9c4817e2d8f86a551a7beb84c"
+    },
+    {
+      "file": "classical_frame240.png",
+      "source_video": "annotated_tracking.mp4",
+      "source_output_frame_index": 240,
+      "absolute_input_frame_index": 240,
+      "source_fps": 30.0,
+      "source_frame_count": 300,
+      "extraction": "OpenCV VideoCapture seek/read; unmodified decoded frame",
+      "sha256": "1f8692c0ea85b60b25aedf5b3380b4340a509e782125849726339be6d66e55f8"
+    },
+    {
+      "file": "hybrid_frame240.png",
+      "source_video": "annotated_tracking.mp4",
+      "source_output_frame_index": 240,
+      "absolute_input_frame_index": 240,
+      "source_fps": 30.0,
+      "source_frame_count": 300,
+      "extraction": "OpenCV VideoCapture seek/read; unmodified decoded frame",
+      "sha256": "dbba23bbac447e5a30fc3b7ab1002647e11d3a44fb9b27caa576e0348125eb87"
+    }
+  ]
+}

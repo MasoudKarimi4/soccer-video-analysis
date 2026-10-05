@@ -1,0 +1,30 @@
+{
+  "input_video": "soccer_footage.mp4",
+  "manual_seed_file": "manual_seed.json",
+  "detector_backend": "ultralytics",
+  "detector_model": "yolo11s.pt",
+  "ball_backend": "hybrid",
+  "frames_processed": 900,
+  "raw_detector_candidates_total": 12661,
+  "detector_ball_candidates_total": 776,
+  "player_detections_total": 10170,
+  "recovered_detections_total": 682,
+  "color_profile": {
+    "calibrated": true,
+    "red_low_max": 19,
+    "red_high_min": 153,
+    "red_sat_min": 65,
+    "red_val_min": 62,
+    "white_sat_max": 82,
+    "white_val_min": 150
+  },
+  "player_detections_by_team": {
+    "team_red": 5438,
+    "team_light": 4597,
+    "team_other": 135
+  },
+  "tracks_total": 96,
+  "ball_visible_frames": 870,
+  "matching": "hungarian_scipy",
+  "output_video": "annotated_tracking.mp4"
+}

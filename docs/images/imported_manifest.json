@@ -1,0 +1,62 @@
+[
+  {
+    "file": "hsv_channels.png",
+    "type": "imported_pipeline_illustration",
+    "source": "presentation_pipeline_steps_frame159/02_hsv_channels.png",
+    "sha256": "2a493cf52e2e3bcb437bf0108b7ac847895deb1e40fa1c5f43e3f33c26785186"
+  },
+  {
+    "file": "pitch_segmentation.png",
+    "type": "imported_pipeline_illustration",
+    "source": "presentation_pipeline_steps_frame159/03_pitch_segmentation.png",
+    "sha256": "02d2ab635620d93cb4d0c9c79ae34b4e2fbc3ef1982bc9a845ada88167d29e6c"
+  },
+  {
+    "file": "playable_region.png",
+    "type": "imported_pipeline_illustration",
+    "source": "presentation_pipeline_steps_frame159/04_playable_region_and_crowd.png",
+    "sha256": "f164f3eecd4c1945d858f0f30c448fb86f54ead8bff4352dcd20b853ca27a0ad"
+  },
+  {
+    "file": "motion_mask.png",
+    "type": "imported_pipeline_illustration",
+    "source": "presentation_pipeline_steps_frame159/05_motion_mask.png",
+    "sha256": "f07fa30466628aec87083e47ae04dd627b5e13150a2e97f26937739e25dcbe64"
+  },
+  {
+    "file": "detector_filtering.png",
+    "type": "imported_pipeline_illustration",
+    "source": "presentation_pipeline_steps_frame159/07_detector_filtering_comparison.png",
+    "sha256": "5fe7373e6f8a4db5984391846572957a0718740e5ff9362c5ebe63a9de7ee224"
+  },
+  {
+    "file": "team_masks.png",
+    "type": "imported_pipeline_illustration",
+    "source": "presentation_pipeline_steps_frame159/08_team_masks.png",
+    "sha256": "108313df0195ba2c051ee5e21cd11366af3e463275569f8e941321f30d515ffa"
+  },
+  {
+    "file": "local_recovery.png",
+    "type": "imported_pipeline_illustration",
+    "source": "presentation_pipeline_steps_frame159/15_recovery_example.png",
+    "sha256": "414313dfff9acda95c77bf0eae64c64dc415cec96dfe5062104297cdca2c0b53"
+  },
+  {
+    "file": "ball_candidates.png",
+    "type": "imported_pipeline_illustration",
+    "source": "presentation_pipeline_steps_frame159/11_ball_detector_candidates.png",
+    "sha256": "02c46be1670ab5671da8d92cd610a3e405e76c37f163190f2498275384e94cec"
+  },
+  {
+    "file": "classical_contours.png",
+    "type": "imported_pipeline_illustration",
+    "source": "presentation_pipeline_steps_classical_v7_frame159/06_motion_contours.png",
+    "sha256": "8995bf9cedfc17635bf525579c4dc7ec4f4a1c2b1977f7d85c18f426e83c2e19"
+  },
+  {
+    "file": "manual_calibration.png",
+    "type": "imported_pipeline_illustration",
+    "source": "presentation_pipeline_steps_frame159/14_manual_seed_calibration.png",
+    "sha256": "5170f3972dc1d226e7535706a10d6a2e135ca91bad339d1f50a2181b53952299"
+  }
+]

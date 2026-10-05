@@ -1,0 +1,51 @@
+[
+  {
+    "id": "classical_safe_v6",
+    "source_folder": "outputs_v7_refined_seeded_safe_v6",
+    "summary_sha256_original": "ed1da4f131c0aa1fbaf51bdf0bcf9dacf4e1179161573925555049c0bacb59d6",
+    "normalization": "Path-valued fields reduced to basenames; numeric metrics unchanged.",
+    "config_available": false
+  },
+  {
+    "id": "classical_safe_v7",
+    "source_folder": "outputs_v7_refined_seeded_safe_v7",
+    "summary_sha256_original": "2e15e734a4cb7408014d68e0840602b39a32958c4b05ec6cbd04b5b36e51ac4d",
+    "normalization": "Path-valued fields reduced to basenames; numeric metrics unchanged.",
+    "config_available": false
+  },
+  {
+    "id": "classical_safe_v8",
+    "source_folder": "outputs_v7_refined_seeded_safe_v8",
+    "summary_sha256_original": "ab5584f903180c0847356f0c31d5f4812c59041e61ab83090915914069e0d1d6",
+    "normalization": "Path-valued fields reduced to basenames; numeric metrics unchanged.",
+    "config_available": false
+  },
+  {
+    "id": "yolo11m_baseline",
+    "source_folder": "outputs_ultralytics_yolo11m_baseline",
+    "summary_sha256_original": "765a7b338ed43e2a4f3a864a25a02fa41f53f853d92f35f71e0c8bbcaaa70a47",
+    "normalization": "Path-valued fields reduced to basenames; numeric metrics unchanged.",
+    "config_available": false
+  },
+  {
+    "id": "hybrid_yolo11m",
+    "source_folder": "outputs_hybrid_ultralytics_yolo11m_ballfusion",
+    "summary_sha256_original": "b34e2d305400095385d7efb4c3ed35053246bbc559b107cca76170bbe869ea5d",
+    "normalization": "Path-valued fields reduced to basenames; numeric metrics unchanged.",
+    "config_available": false
+  },
+  {
+    "id": "hybrid_yolo11s_highres",
+    "source_folder": "outputs_hybrid_ultralytics_yolo11s_ball_highresml_viz",
+    "summary_sha256_original": "2659309bfb7719a88eb4d3a3383412913b7a9c5837a1157ba4baeba0d7e1e2dd",
+    "normalization": "Path-valued fields reduced to basenames; numeric metrics unchanged.",
+    "config_available": false
+  },
+  {
+    "id": "hybrid_yolo11s_30sec",
+    "source_folder": "outputs_hybrid_ultralytics_yolo11s_ball_highresml_viz_30sec",
+    "summary_sha256_original": "724c0f1a5e451657648835ebf9d5cb2f0f41a3f0ba69b098da055f4e86bda746",
+    "normalization": "Path-valued fields reduced to basenames; numeric metrics unchanged.",
+    "config_available": false
+  }
+]

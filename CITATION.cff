@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the project and relevant upstream methods if you use this work."
+title: "Soccer Player Detection and Multi-Object Tracking"
+type: software
+authors:
+  - family-names: Karimi
+    given-names: Masoud
+  - family-names: Sikka
+    given-names: Zachary
+abstract: "A classical and hybrid broadcast-soccer analysis pipeline using HSV segmentation, calibrated jersey masks, YOLO11 proposals, local recovery, Kalman tracking, assignment, and ball fusion."
+keywords:
+  - soccer
+  - computer vision
+  - image processing
+  - object tracking
+  - OpenCV

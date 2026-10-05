@@ -1,0 +1,5 @@
+{
+  "pipeline": "baseline",
+  "description": "Detector-only YOLO/ByteTrack baseline, with sports-ball class enabled.",
+  "parameters": {"duration-sec": 10, "resize-width": 960, "imgsz": 960, "conf": 0.15, "iou": 0.45, "device": "cpu", "include-ball": true, "random-seed": 0}
+}

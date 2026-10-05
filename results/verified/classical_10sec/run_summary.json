@@ -1,0 +1,92 @@
+{
+  "input_video": "..\\soccer_footage.mp4",
+  "manual_seed_file": "configs\\manual_seed.example.json",
+  "frames_processed": 300,
+  "player_detections_total": 2249,
+  "color_profile": {
+    "calibrated": true,
+    "red_low_max": 19,
+    "red_high_min": 153,
+    "red_sat_min": 65,
+    "red_val_min": 62,
+    "white_sat_max": 82,
+    "white_val_min": 150
+  },
+  "player_detections_by_team": {
+    "team_red": 1108,
+    "team_light": 1116,
+    "team_other": 25
+  },
+  "tracks_total": 45,
+  "ball_visible_frames": 270,
+  "ball_measured_frames": 270,
+  "ball_predicted_visible_frames": 0,
+  "metadata": {
+    "schema_version": 2,
+    "parameters": {
+      "video": "..\\soccer_footage.mp4",
+      "output": "outputs\\verified_classical_pinned",
+      "seed_file": "configs\\manual_seed.example.json",
+      "start_sec": 0.0,
+      "duration_sec": 10.0,
+      "resize_width": 960,
+      "field_hsv_lower": [
+        28,
+        25,
+        25
+      ],
+      "field_hsv_upper": [
+        95,
+        255,
+        255
+      ],
+      "row_green_threshold": 0.3,
+      "row_green_run": 8,
+      "crowd_top_cut": 0,
+      "min_area": 80.0,
+      "max_area": 3600.0,
+      "min_aspect": 1.1,
+      "max_aspect": 6.0,
+      "min_nongreen": 0.1,
+      "max_match_distance": 78.0,
+      "class_mismatch_penalty": 55.0,
+      "max_missed": 24,
+      "trail_length": 60,
+      "ball_min_area": 6.0,
+      "ball_max_area": 180.0,
+      "ball_max_dist": 68.0,
+      "ball_max_missed": 18,
+      "ball_local_window": 85,
+      "team_local_window": 58,
+      "team_recover_max_missed": 4,
+      "enable_global_team_mask_recovery": false,
+      "calibration_frames": 45,
+      "calibration_min_pixels": 260,
+      "manual_seed_min_pixels": 110,
+      "warmup_frames": 30,
+      "save_masks": false,
+      "preview": false,
+      "random_seed": 0
+    },
+    "source_fps": 30.0,
+    "warmup_frames": 30,
+    "elapsed_seconds": 14.188,
+    "environment": {
+      "python": "3.12.14",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "packages": {
+        "numpy": "1.26.4",
+        "opencv-python": "4.11.0.86",
+        "scipy": "1.13.1",
+        "ultralytics": "8.3.107",
+        "torch": "2.6.0+cpu",
+        "lap": "0.5.12"
+      }
+    },
+    "asset_sha256": {
+      "seed_file": "e34c386e18f86d26a836485838cbe5d0ea00e9e8b3fb3ce9bc84cf1b4a38867e"
+    }
+  },
+  "matching": "hungarian_scipy",
+  "output_video": "outputs\\verified_classical_pinned\\annotated_tracking.mp4"
+}

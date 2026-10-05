@@ -1,0 +1,27 @@
+[
+  {
+    "asset": "video",
+    "filename": "soccer_footage.mp4",
+    "size_bytes": 617834328,
+    "sha256": "8dc416ee52e9fdffea5983a767de74d9e8d2b9df80d38646fa4c27701038126b",
+    "fps": 30.0,
+    "frames": 7118,
+    "width": 1920,
+    "height": 1080,
+    "external_source": "Report describes YouTube broadcast footage; exact URL not supplied."
+  },
+  {
+    "asset": "yolo11s",
+    "filename": "yolo11s.pt",
+    "size_bytes": 19313732,
+    "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5"
+  },
+  {
+    "asset": "manual_seed",
+    "filename": "manual_seed.example.json",
+    "size_bytes": 1193,
+    "sha256": "e34c386e18f86d26a836485838cbe5d0ea00e9e8b3fb3ce9bc84cf1b4a38867e",
+    "canonical_json_sha256": "d9c45a43e97b049340184722791afe1fe34b9652d9db12e875f3681f709d6259",
+    "note": "Raw hash identifies original CRLF input bytes used for verification; Git text normalization can change raw bytes without changing JSON values."
+  }
+]
