@@ -4,7 +4,6 @@
 
 A picture-processing project that combines interpretable OpenCV operations with selective YOLO11 detection. The classical branch uses field segmentation, motion contours, jersey masks, and temporal tracking. The recommended hybrid branch uses YOLO for object proposals, then applies scene filtering, color classification, local recovery, and a custom Kalman/assignment tracker.
 
-Developed for **CSI4133 Picture Processing, Group 5**, by **Masoud Karimi and Zachary Sikka**.
 
 ![Input, freshly verified classical pipeline, and freshly verified hybrid pipeline at three matching frames](docs/images/verified/comparison.png)
 
@@ -21,7 +20,6 @@ Developed for **CSI4133 Picture Processing, Group 5**, by **Masoud Karimi and Za
 - Fuses learned and classical ball candidates, including searches near the previous ball and player feet.
 - Writes annotated video, per-track statistics, frame-level measurements, and run metadata.
 
-This is an inference and image-processing project. It does not train a soccer-specific model, perform player re-identification, estimate physical speed, or implement the heatmaps proposed in the initial project plan.
 
 ## Quick start
 
@@ -154,4 +152,3 @@ Tests need only the core dependencies. CI runs them on Windows and Linux with Py
 - [Repository preparation and publishing](docs/repository-preparation.md)
 - [Licensing and third-party assets](docs/licensing.md)
 
-The original broadcast clip is described in the paper as YouTube-sourced; its exact URL and rights information were not supplied. Selected frame excerpts are retained as project evidence with this provenance limitation disclosed. Weights and full videos remain external. No new license has been assigned to the contributors' work; dependency licenses remain applicable.
