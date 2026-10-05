@@ -127,7 +127,7 @@ See [architecture](docs/architecture.md) and [theory](docs/theory.md) for the co
 | `generate_pipeline_figures.py` | Explain the hybrid stages through images |
 | `generate_classical_figures.py` | Explain the classical stages through images |
 | `capture_evidence.py`, `extract_debug_frames.py` | Capture actual input/output frames |
-| `docs/` | Theory, reproduction, results, limitations, evidence, and adapted analysis paper |
+| `docs/` | Theory, reproduction, results, limitations, and visual evidence |
 | `results/historical/` | Selected supplied summaries and track CSVs, with provenance |
 | `results/verified/` | Fresh measurements of this repository's implementation |
 | `tests/`, `.github/workflows/` | Regression tests, synthetic video smoke test, and CI |
@@ -149,8 +149,4 @@ Tests need only the core dependencies. CI runs them on Windows and Linux with Py
 - [Results, metric definitions, and conflicting historical claims](docs/results.md)
 - [Visual evidence and capture commands](docs/visual-evidence.md)
 - [Known limitations and next experiments](docs/limitations.md)
-- [Analysis paper, adapted for GitHub](docs/paper/analysis-paper.md)
-- [Sources and references](docs/references.md)
-- [Repository preparation and publishing](docs/repository-preparation.md)
-- [Licensing and third-party assets](docs/licensing.md)
 

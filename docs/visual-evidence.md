@@ -18,7 +18,7 @@ At frame 159, the hybrid places the ball marker near the small white object on t
 
 The historical classical column is **`outputs_v7_refined_seeded_safe_v8`**, whose saved summary is notably red-heavy. It is not the unavailable “best restored” checkpoint described by the notes. The historical hybrid column is **`outputs_hybrid_ultralytics_yolo11s_ball_highresml_viz`**. The [historical capture manifest](images/capture_manifest.json) identifies the original output videos and decoded frames.
 
-Using these images beside the fresh results avoids silently replacing historical outputs with newer runs. The paper adaptation's final figure links to the supplied final hybrid frame-159 screenshot.
+Using these images beside the fresh results avoids silently replacing historical outputs with newer runs. The supplied final hybrid frame-159 screenshot is retained as historical evidence.
 
 ## Imported intermediate-stage illustrations
 
@@ -45,4 +45,4 @@ Use [capture_evidence.py](../capture_evidence.py) to extract aligned source/outp
 
 The comparison chart is derived solely from checked-in summaries using [summarize_results.py](../summarize_results.py), with values also in [comparison.csv](../results/comparison.csv). It visualizes output counts and created IDs; it is not an accuracy chart.
 
-The original broadcast URL was not supplied. Frame excerpts therefore have local-video provenance rather than a verified external source link; see [licensing](licensing.md).
+The original broadcast URL was not supplied. Frame excerpts therefore have local-video provenance rather than a verified external source link.
