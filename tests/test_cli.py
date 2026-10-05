@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import sysconfig
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -26,7 +27,7 @@ class CLITests(unittest.TestCase):
             for name in commands:
                 with self.subTest(command=name):
                     self.assertIn(name, entry_points)
-                    executable = Path(sys.executable).parent / (name + '.exe' if os.name == 'nt' else name)
+                    executable = Path(sysconfig.get_path('scripts')) / (name + '.exe' if os.name == 'nt' else name)
                     result = subprocess.run([str(executable), '--help'], check=True, capture_output=True, text=True, cwd=tmp)
                     self.assertIn('--video', result.stdout)
 
